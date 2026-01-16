@@ -431,5 +431,13 @@
         }
     </script>
     <link rel="stylesheet" href="style.css">
+    <script>
+  // This triggers an error 2 seconds after the page loads.
+  // This gives the config.js time to initialize its listeners.
+  setTimeout(() => {
+    console.log("Triggering test error now...");
+    triggerMentorTestError(); 
+  }, 2000);
+</script>
 </body>
 </html>
